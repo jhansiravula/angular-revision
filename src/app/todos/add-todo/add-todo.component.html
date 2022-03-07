@@ -1,1 +1,27 @@
-<p>add-todo works!</p>
+  <!--parent component-->
+  <div class="card mb-4 border-0">
+    <div class="card-header">
+      <form [formGroup]="addTodoForm">
+        <div class="input-group mb-1">
+          <input type="text" class="form-control" required autocomplete=off autofocus="true" placeholder="Enter Todo"
+            formControlName="todoName" name="todoName" [ngClass]="{ 'is-invalid': submitted && tf.todoName.errors }">
+          <button class="btn btn-outline-primary" type="submit" id="button-addon2" (click)="onsubmit()">
+            <i class="bi bi-plus-lg"></i></button>
+        </div>
+        <div class="card-subtitle">
+          <div *ngIf="submitted && tf.todoName.errors" class="alert-warning">
+            <div *ngIf="tf.todoName.errors?.required">Todo is required</div>
+            <div *ngIf="tf.todoName.errors?.minlength">
+              Todo must be at least 3 characters
+            </div>
+          </div>
+        </div>
+
+      </form>
+    </div>
+    <app-todo-list></app-todo-list>
+    <!--child component-->
+    <!-- <app-todo-list *ngFor="let item of todos;let i = index" [todo]="item" (todochecked)="togglecompleteTodo(item)"
+      (todoEdit)="editTodo(item)" (todoDelete)="deleteTodo(item)">
+    </app-todo-list> -->
+  </div>

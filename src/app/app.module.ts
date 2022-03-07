@@ -9,22 +9,24 @@ import { ProductslistComponent } from './productslist/productslist.component';
 import { DeleteproductsComponent } from './deleteproducts/deleteproducts.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TodosModule } from './todos/todos.module';
-// import { TodoComponent } from './todos/todo/todo.component';
-
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TodoWithJsonfileComponent } from './todo-with-jsonfile/todo-with-jsonfile.component';
 @NgModule({
   declarations: [
     AppComponent,
     AddproductComponent,
     ProductslistComponent,
     DeleteproductsComponent,
+    TodoWithJsonfileComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    TodosModule
+    TodosModule,
+    // FormsModule,
+    // ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,20 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <h6 class="circularBold signUpHeading">Confirm Popup</h6>
+    <button type="button" class="close" aria-label="Close" data-dismiss="modal" (click)="cancelModal()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="">
+        <h5>Delete the Todo?</h5>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-primary" (click)="cancelModal()"> Cancel</button>
+        <!-- <button type="submit" class="btn btn-sm btn-primary" (click)="deleteTodo(id)"> Delete</button> -->
+      </div>
+    </form>
+  </div>
+
+</div>
