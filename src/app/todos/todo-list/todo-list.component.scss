@@ -1,0 +1,96 @@
+.todos {
+  border-bottom: 1px solid #e3d9d9;
+}
+.todo-item {
+  display: flex;
+}
+.checkbox {
+  font-size: 25px;
+  margin-right: 10px;
+  margin-top: -7px;
+  display: flex;
+  .checkbox1 {
+    font-size: 22px;
+    margin-right: 9px;
+    margin-bottom: -17px;
+  }
+}
+.float-end {
+  justify-content: end;
+  font-size: 18px;
+}
+li.list-group-item.border-0 {
+  display: contents;
+}
+.todos .todo-item .checkbox1 {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  &.completed {
+    color: #aaa;
+  }
+}
+
+.todos .todo-item .completed .checkbox1 {
+  background: rgb(11, 223, 170);
+  border-color: rgb(11, 223, 170);
+  i.checkbox1 {
+    opacity: 1;
+    color: #555;
+  }
+}
+.checkbox .todo-controls-box {
+  margin-top: -2vh;
+  i.edit {
+    font-size: 20px;
+    margin: auto;
+    color: #333;
+    // hide by default
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+}
+i.bi {
+  margin-top: -10px;
+  margin-bottom: 3px;
+}
+.todo-controls-box {
+  display: flex;
+  cursor: pointer;
+  margin-top: -24px;
+}
+
+.todos .todo-item .todo-controls-box {
+  position: absolute;
+  bottom: 0;
+  right: 5px;
+
+  display: flex;
+
+  // hide by default
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(2px);
+
+  transition: opacity 0.2s, visibility 0.2s, transform 0.2s;
+}
+
+.todos:hover .todo-item .todo-controls-box {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.4s;
+  transform: translateY(0);
+}
+
+.todo-controls-box .todo-control-button .edit {
+  display: flex;
+  background: #f5f7f8;
+
+  padding: 7px 10px;
+
+  i.edit {
+    color: #555;
+    font-size: 20px;
+  }
+}

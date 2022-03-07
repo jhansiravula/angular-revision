@@ -1,0 +1,21 @@
+<!--child component-->
+<div class="card-body mb-1">
+  <ul class="list-group list-group-flush d-flex todos">
+    <div class="todo-item d-flex" [class.completed]="todo.completed" (click)="onTodoClick()">
+      <div class="checkbox">
+        <i class="bi bi-check2-circle checkbox1"></i>
+      </div>
+      <li class="list-group-item border-0 ">{{todo.text}}</li>
+    </div>
+
+    <div class="todo-controls-box me-2 float-end pt-1">
+      <div class="todo-control-button" ngbTooltip="Edit Todo" (click)="editTodo()">
+        <i class="bi bi-pencil-square pe-1 edit" [class.editing]="todo.editing"></i>
+      </div>
+
+      <div class="todo-control-button is-danger" ngbTooltip="Delete Todo" (click)="deleteTodo()">
+        <i class="bi bi-trash edit" title="delete"></i>
+      </div>
+    </div>
+  </ul>
+</div>

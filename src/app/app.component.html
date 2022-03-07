@@ -1,9 +1,32 @@
-<mat-toolbar color="green">
-    <h1>
-      ngStore 
-    </h1>
-    <button mat-button routerLink="/">Home</button>
-    <button mat-button routerLink="/about">About</button>
-  
-  </mat-toolbar>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Todos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Todos JSON</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Todos with API</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Login</a>
+        </li> -->
+      </ul>
+      <div class="float-end" style="margin-left: 38cm;">
+        <button class="btn btn-sm btn-primary float-end">
+          Login
+        </button></div>
+
+    </div>
+  </div>
+</nav>
+
 <router-outlet></router-outlet>
